@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-POP UNIVERSE | 글로벌 음악의 진화</title>
+    <meta name="description" content="전 세계를 사로잡은 K-POP의 매력과 역사를 소개합니다.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <h1>K-POP UNIVERSE</h1>
+        <p>전 세계를 뒤흔든 폭발적인 에너지, 독보적인 퍼포먼스, 그리고 한계를 넘어서는 비주얼. 지금 바로 K-POP의 세계로 초대합니다.</p>
+        <a href="#about" class="cta-button">자세히 알아보기</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">WHAT IS <span>K-POP?</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>GLOBAL IMPACT</h3>
+                <p>단순한 음악 장르를 넘어 패션, 댄스, 라이프스타일까지 전 세계 문화 트렌드를 주도하며 유튜브와 빌보드를 점령하고 있습니다.</p>
+            </div>
+            <div class="card">
+                <h3>PERFORMANCE</h3>
+                <p>칼군무(Knife-like dance)로 불리는 완벽한 퍼포먼스와 무대 장악력은 전 세계 팬들을 매료시키는 K-POP의 상징입니다.</p>
+            </div>
+            <div class="card">
+                <h3>FASHION & STYLE</h3>
+                <p>실험적이고 트렌디한 비주얼, 독창적인 패션 감각은 아티스트들을 단순한 가수를 넘어선 글로벌 패션 아이콘으로 만듭니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Showcase Section -->
+    <section id="visuals" style="background: rgba(255,0,122, 0.03);">
+        <div class="showcase">
+            <div class="showcase-img">
+                <img src="kpop_group_girl_1777097446638.png" alt="K-pop Artist Visual">
+            </div>
+            <div class="showcase-content">
+                <h2>BEYOND THE <span>STAGE</span></h2>
+                <p>K-POP은 정교한 아티스트 트레이닝 시스템을 통해 탄생한 완벽한 결과물입니다. 보컬, 랩, 댄스는 물론 무대 위의 연기력까지 모든 요소가 조화를 이루어 하나의 예술 작품이 완성됩니다.</p>
+                <p style="margin-top: 20px;">이제 K-POP은 언어의 장벽을 넘어 전 세계 사람들을 하나로 잇는 거대한 커뮤니티가 되었습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="elements">
+        <h2 class="section-title">THE <span>CORE</span> ELEMENTS</h2>
+        <div class="grid">
+            <div class="card" style="text-align: center;">
+                <h3 style="color: var(--primary);">01</h3>
+                <h3>Music</h3>
+                <p>중독성 있는 멜로디와 하이 퀄리티 사운드.</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <h3 style="color: var(--primary);">02</h3>
+                <h3>Story</h3>
+                <p>탄탄한 세계관과 깊이 있는 가사의 울림.</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <h3 style="color: var(--primary);">03</h3>
+                <h3>Fandom</h3>
+                <p>전 세계를 하나로 묶는 강력한 유대감.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 K-POP UNIVERSE. All rights reserved.</p>
+        <p style="margin-top: 10px;">Created for a Stunning Digital Experience.</p>
+    </footer>
+
+    <script>
+        // Simple scroll animation trigger
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .showcase').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
